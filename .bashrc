@@ -1,4 +1,5 @@
-function current_git_branch {
-  git branch 2> /dev/null | perl -ne 'print " [$_]" if s/^\*\s+// && chomp'
+git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
-PS1="\w\$(current_git_branch) "
+
+export PS1="[\u@\h \W]\$(git_branch)\$ "
