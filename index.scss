@@ -1,6 +1,17 @@
 
-#welcome {
+body {
+	background-color: #c1d0be;
+}
+
+nav {
+	background-color: white;
+	height: 150px;
+	position: fixed;
+	z-index: 2;
+}
+
+h1 {
 	margin-top: 100px;
-	text-align: center;
-	font-family: arial;
+	font-family: 'Questrial', sans-serif;
+	color: #4f514e;
 }
