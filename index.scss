@@ -1,17 +1,15 @@
-/* $page-theme: #c3d6bf;
-$dark-gray: #4f514e; */
+---
+---
 
-/*
+$page-theme: #c3d6bf;
+$dark-gray: #4f514e;
 
-Next steps:
-1. Figure out why there's two SCSS/HTML files
-2. Get Sass working properly
-3. Come up with a gameplan for the site
+// Next steps:
+// 1. Come up with a gameplan for the site
 
-*/
 
 body {
-	background-color: #c3d6bf;
+	background-color: $page-theme;
 	height: 2000px;
 }
 
@@ -30,5 +28,5 @@ h1 {
 	margin-top: 190px;
 	text-align: center;
 	font-family: 'Questrial', sans-serif;
-	color: #4f514e;
+	color: $dark-gray;
 }
