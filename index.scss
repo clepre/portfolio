@@ -3,13 +3,19 @@
 
 $page-theme: #c3d6bf;
 $dark-gray: #4f514e;
+$olive-green: #79874e;
+$logo-size: 70px;
 
 body {
 	background-color: $page-theme;
+	font-family: 'Questrial', sans-serif;
+	color: $dark-gray;
 	height: 2000px;
 }
 
 nav {
+	display: flex;
+	justify-content: space-between;
 	background-color: white;
 	height: 90px;
 	width: 100%;
@@ -20,9 +26,41 @@ nav {
 	opacity: .7;
 }
 
-h1 {
+.splash {
 	margin-top: 190px;
 	text-align: center;
-	font-family: 'Questrial', sans-serif;
-	color: $dark-gray;
+
+	h1, h2 {
+		font-weight: 200;
+	}
+}
+
+.logo-box, .nav-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.logo-img {
+	background-image: url('https://cdn1.iconfinder.com/data/icons/vegetables-62/500/SingleCartoonVegetablesYulia_2-128.png');
+	background-position: center;
+	background-size: $logo-size $logo-size;
+	width: $logo-size;
+	height: $logo-size;
+	margin-left: 20px;
+}
+
+.logo-text {
+	color: $olive-green;
+}
+
+.page-nav {
+	margin: 0px 20px;
+	padding-bottom: 5px;
+	border-bottom: 3px solid transparent;
+	cursor: pointer;
+
+	&:hover {
+		border-color: $page-theme;
+	}
 }
