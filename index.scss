@@ -58,7 +58,9 @@ nav {
 	margin: 0px 20px;
 	padding-bottom: 5px;
 	border-bottom: 3px solid transparent;
-	cursor: pointer;
+	//cursor: pointer;
+	text-decoration: none;
+	color: $dark-gray;
 
 	&:hover {
 		border-color: $page-theme;

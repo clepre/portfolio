@@ -42,6 +42,7 @@ nav {
   margin: 0px 20px;
   padding-bottom: 5px;
   border-bottom: 3px solid transparent;
-  cursor: pointer; }
+  text-decoration: none;
+  color: #4f514e; }
   .page-nav:hover {
     border-color: #c3d6bf; }
