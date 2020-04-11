@@ -16,16 +16,20 @@ nav {
   z-index: 2;
   opacity: .7; }
 
-.splash {
+.main {
   margin-top: 190px;
   text-align: center; }
-  .splash h1, .splash h2 {
+  .main h1, .main h2 {
     font-weight: 200; }
 
 .logo-box, .nav-box {
   display: flex;
   justify-content: center;
   align-items: center; }
+
+.logo-box {
+  color: #79874e;
+  text-decoration: none; }
 
 .logo-img {
   background-image: url("https://cdn1.iconfinder.com/data/icons/vegetables-62/500/SingleCartoonVegetablesYulia_2-128.png");
@@ -34,9 +38,6 @@ nav {
   width: 70px;
   height: 70px;
   margin-left: 20px; }
-
-.logo-text {
-  color: #79874e; }
 
 .page-nav {
   margin: 0px 20px;
