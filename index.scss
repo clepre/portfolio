@@ -4,14 +4,34 @@
 $page-theme: #c3d6bf;
 $dark-gray: #4f514e;
 $olive-green: #79874e;
+$pale-olive: #e1eadf;
 $logo-size: 70px;
+
+$book-covers:
+'https://hips.hearstapps.com/bpc.h-cdn.co/assets/17/36/1504803696-devil-in-the-white-city.jpg?crop=1.0xw:1xh;center,top&resize=480:*'
+'https://mvlteenvoice.files.wordpress.com/2018/07/littleprince.jpg'
+'https://rectalcancermyass.files.wordpress.com/2016/01/in-defense-of-food-book-cover.jpg'
+'http://cdn.skim.gs/images/yfy8mnr9p1cdkczo7af4/history-books-diversity-lies-my-teacher-told-me'
+'https://images-na.ssl-images-amazon.com/images/I/51Rw-nT%2BKgL.jpg'
+'http://saypeople.com/wp-content/uploads/2016/09/Just-Mercy-A-Story-of-Justice-and-Redemption-by-Bryan-Stevenson.jpg'
+'http://d.gr-assets.com/books/1363265160l/17345270.jpg';
+
+@mixin img($width, $height, $url) {
+	background-image: url($url);
+	background-position: center;
+	background-size: $width $height;
+	width: $width;
+	height: $height;
+}
 
 body {
 	background-color: $page-theme;
 	font-family: 'Questrial', sans-serif;
 	color: $dark-gray;
-	height: 2000px;
 }
+
+
+// NAVBAR
 
 nav {
 	display: flex;
@@ -26,15 +46,6 @@ nav {
 	opacity: .7;
 }
 
-.main {
-	margin-top: 190px;
-	text-align: center;
-
-	h1, h2 {
-		font-weight: 200;
-	}
-}
-
 .logo-box, .nav-box {
 	display: flex;
 	justify-content: center;
@@ -47,11 +58,7 @@ nav {
 }
 
 .logo-img {
-	background-image: url('https://cdn1.iconfinder.com/data/icons/vegetables-62/500/SingleCartoonVegetablesYulia_2-128.png');
-	background-position: center;
-	background-size: $logo-size $logo-size;
-	width: $logo-size;
-	height: $logo-size;
+	@include img($logo-size, $logo-size, 'https://cdn1.iconfinder.com/data/icons/vegetables-62/500/SingleCartoonVegetablesYulia_2-128.png');
 	margin-left: 20px;
 }
 
@@ -65,4 +72,56 @@ nav {
 	&:hover {
 		border-color: $page-theme;
 	}
+}
+
+
+// BODY
+
+$item-width: 250px;
+$item-height: 350px;
+
+.main {
+	margin-top: 140px;
+	text-align: center;
+
+	h1, h2 {
+		font-weight: 200;
+	}
+}
+
+.item-grid {
+	display: grid;
+	grid-template-rows: repeat(4, $item-height);
+	grid-template-columns: repeat(4, $item-width);
+	gap: 40px 40px;
+	justify-content: center;
+}
+
+.grid-item {
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: $pale-olive;
+	border-radius: 10px;
+}
+
+@for $i from 1 through length($book-covers) {
+	.book-cover-#{$i} {
+		@include img(150px, 250px, nth($book-covers, $i));
+	}
+}
+
+.book-title {
+	font-size: 18px;
+	margin-top: 15px;
+	margin-bottom: 4px;
+
+	&.long {
+		font-size: 16px;
+	}
+}
+
+.book-author {
+	font-size: 14px;
 }

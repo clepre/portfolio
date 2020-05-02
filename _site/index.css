@@ -1,8 +1,7 @@
 body {
   background-color: #c3d6bf;
   font-family: 'Questrial', sans-serif;
-  color: #4f514e;
-  height: 2000px; }
+  color: #4f514e; }
 
 nav {
   display: flex;
@@ -15,12 +14,6 @@ nav {
   left: 0px;
   z-index: 2;
   opacity: .7; }
-
-.main {
-  margin-top: 190px;
-  text-align: center; }
-  .main h1, .main h2 {
-    font-weight: 200; }
 
 .logo-box, .nav-box {
   display: flex;
@@ -47,3 +40,83 @@ nav {
   color: #4f514e; }
   .page-nav:hover {
     border-color: #c3d6bf; }
+
+.main {
+  margin-top: 140px;
+  text-align: center; }
+  .main h1, .main h2 {
+    font-weight: 200; }
+
+.item-grid {
+  display: grid;
+  grid-template-rows: repeat(4, 350px);
+  grid-template-columns: repeat(4, 250px);
+  gap: 40px 40px;
+  justify-content: center; }
+
+.grid-item {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #e1eadf;
+  border-radius: 10px; }
+
+.book-cover-1 {
+  background-image: url("https://hips.hearstapps.com/bpc.h-cdn.co/assets/17/36/1504803696-devil-in-the-white-city.jpg?crop=1.0xw:1xh;center,top&resize=480:*");
+  background-position: center;
+  background-size: 150px 250px;
+  width: 150px;
+  height: 250px; }
+
+.book-cover-2 {
+  background-image: url("https://mvlteenvoice.files.wordpress.com/2018/07/littleprince.jpg");
+  background-position: center;
+  background-size: 150px 250px;
+  width: 150px;
+  height: 250px; }
+
+.book-cover-3 {
+  background-image: url("https://rectalcancermyass.files.wordpress.com/2016/01/in-defense-of-food-book-cover.jpg");
+  background-position: center;
+  background-size: 150px 250px;
+  width: 150px;
+  height: 250px; }
+
+.book-cover-4 {
+  background-image: url("http://cdn.skim.gs/images/yfy8mnr9p1cdkczo7af4/history-books-diversity-lies-my-teacher-told-me");
+  background-position: center;
+  background-size: 150px 250px;
+  width: 150px;
+  height: 250px; }
+
+.book-cover-5 {
+  background-image: url("https://images-na.ssl-images-amazon.com/images/I/51Rw-nT%2BKgL.jpg");
+  background-position: center;
+  background-size: 150px 250px;
+  width: 150px;
+  height: 250px; }
+
+.book-cover-6 {
+  background-image: url("http://saypeople.com/wp-content/uploads/2016/09/Just-Mercy-A-Story-of-Justice-and-Redemption-by-Bryan-Stevenson.jpg");
+  background-position: center;
+  background-size: 150px 250px;
+  width: 150px;
+  height: 250px; }
+
+.book-cover-7 {
+  background-image: url("http://d.gr-assets.com/books/1363265160l/17345270.jpg");
+  background-position: center;
+  background-size: 150px 250px;
+  width: 150px;
+  height: 250px; }
+
+.book-title {
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 4px; }
+  .book-title.long {
+    font-size: 16px; }
+
+.book-author {
+  font-size: 14px; }
