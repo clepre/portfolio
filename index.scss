@@ -16,6 +16,12 @@ $book-covers:
 'http://saypeople.com/wp-content/uploads/2016/09/Just-Mercy-A-Story-of-Justice-and-Redemption-by-Bryan-Stevenson.jpg'
 'http://d.gr-assets.com/books/1363265160l/17345270.jpg';
 
+$veggies:
+'https://media.buzzle.com/media/images-en/photos/vegetables/1200-82459879-yellow-onion.jpg'
+'http://modernfarmer.com/wp-content/uploads/2014/11/romanescohero.jpg';
+
+$veggie-widths: 180px 240px;
+
 @mixin img($width, $height, $url) {
 	background-image: url($url);
 	background-position: center;
@@ -106,6 +112,8 @@ $item-height: 350px;
 	border-radius: 10px;
 }
 
+// BOOKS
+
 @for $i from 1 through length($book-covers) {
 	.book-cover-#{$i} {
 		@include img(150px, 250px, nth($book-covers, $i));
@@ -124,4 +132,18 @@ $item-height: 350px;
 
 .book-author {
 	font-size: 14px;
+}
+
+// VEGGIES
+
+@for $i from 1 through length($veggies) {
+	.veggie-#{$i} {
+		@include img(nth($veggie-widths, $i), 150px, nth($veggies, $i));
+		border-radius: 100%;
+	}
+}
+
+.veggie-name {
+	font-size: 20px;
+	margin-top: 20px;
 }

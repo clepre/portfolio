@@ -120,3 +120,23 @@ nav {
 
 .book-author {
   font-size: 14px; }
+
+.veggie-1 {
+  background-image: url("https://media.buzzle.com/media/images-en/photos/vegetables/1200-82459879-yellow-onion.jpg");
+  background-position: center;
+  background-size: 180px 150px;
+  width: 180px;
+  height: 150px;
+  border-radius: 100%; }
+
+.veggie-2 {
+  background-image: url("http://modernfarmer.com/wp-content/uploads/2014/11/romanescohero.jpg");
+  background-position: center;
+  background-size: 240px 150px;
+  width: 240px;
+  height: 150px;
+  border-radius: 100%; }
+
+.veggie-name {
+  font-size: 20px;
+  margin-top: 20px; }
